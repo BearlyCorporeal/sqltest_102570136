@@ -1,0 +1,60 @@
+drop table if EXISTS PlayerRegistration0136
+drop table if EXISTS TeamEntry0136
+drop table if EXISTS player0136;
+drop table if EXISTS Season0136
+drop table if EXISTS club0136
+create table Player0136(
+PlayerID INT
+,Fname nvarchar(100) not null
+,Lname nvarchar(100) not null
+,phone nvarchar(50)
+PRIMARY KEY(PlayerID)
+)
+INSERT INTO Player0136(PlayerID,Fname, Lname, phone) VALUES (10002, 'John', 'Howard', '5552345')
+INSERT INTO Player0136(PlayerID,Fname, Lname, phone) VALUES (10003, 'Julia', 'Gillard', '5553456')
+INSERT INTO Player0136(PlayerID,Fname, Lname, phone) VALUES (10004, 'Dave', 'Strider','5554387')
+INSERT INTO Player0136(PlayerID,Fname, Lname, phone) VALUES (10005, 'Dirk', 'Gently', '5556453')
+CREATE TABLE Season0136(
+SeasonYear int 
+,SeasonName nvarchar(6)
+PRIMARY KEY(SeasonYear,SeasonName)
+)
+INSERT INTO Season0136(SeasonYear,SeasonName) VALUES (2018, 'Winter')
+INSERT INTO Season0136(SeasonYear,SeasonName) VALUES (2018, 'Summer')
+INSERT INTO Season0136(SeasonYear,SeasonName) VALUES (2018, 'Spring')
+INSERT INTO Season0136(SeasonYear,SeasonName) VALUES (2018, 'Autumn')
+CREATE TABLE club0136(
+ClubName NVARCHAR(100)
+,ContactName NVARCHAR(100)
+PRIMARY KEY(ClubName)
+)
+INSERT INTO club0136(ClubName,ContactName) VALUES ('Mt Martha Basketball Club', 'Bob Jane')
+INSERT INTO club0136(ClubName,ContactName) VALUES ('Novigrad Basketball Club', 'Dan Mack')
+INSERT INTO club0136(ClubName,ContactName) VALUES ('Mt Teal Basketball Club', 'Mark gardman')
+INSERT INTO club0136(ClubName,ContactName) VALUES ('Hallownest Basketball Club', 'peter ')
+CREATE TABLE TeamEntry0136(
+ClubName NVARCHAR(100)
+,SeasonYear int
+,SeasonName nvarchar(6)
+,AgeGroup NVARCHAR(3)
+,TeamNumber int
+PRIMARY KEY(AgeGroup,TeamNumber,SeasonYear,SeasonName,ClubName)
+)
+INSERT INTO TeamEntry0136(ClubName,SeasonYear,SeasonName,AgeGroup,TeamNumber)VALUES('Mt Martha Basketball Club', 2018, 'Summer', 'U14',1)
+INSERT INTO TeamEntry0136(ClubName,SeasonYear,SeasonName,AgeGroup,TeamNumber)VALUES('Mt Martha Basketball Club', 2018, 'Spring', 'U14',4)
+INSERT INTO TeamEntry0136(ClubName,SeasonYear,SeasonName,AgeGroup,TeamNumber)VALUES('Mt Teal Basketball Club', 2018, 'Summer', 'U14',2)
+INSERT INTO TeamEntry0136(ClubName,SeasonYear,SeasonName,AgeGroup,TeamNumber)VALUES('Hallownest Basketball Club', 2018, 'Winter', 'U14',3)
+CREATE TABLE PlayerRegistration0136(
+dateRegistered DATE
+,PlayerID INT
+,ClubName NVARCHAR(100)
+,SeasonYear int
+,SeasonName nvarchar(6)
+,AgeGroup NVARCHAR(3)
+,TeamNumber int
+PRIMARY KEY(PlayerID,AgeGroup,TeamNumber,SeasonYear,SeasonName,ClubName)
+)
+INSERT INTO TeamEntry0136(ClubName,SeasonYear,SeasonName,AgeGroup,TeamNumber,PlayerID,dateRegistered)VALUES('Mt Martha Basketball Club', 2018, 'Summer', 'U14', 1, 10002, 12/3/2017)
+INSERT INTO TeamEntry0136(ClubName,SeasonYear,SeasonName,AgeGroup,TeamNumber,PlayerID,dateRegistered)VALUES('Mt Martha Basketball Club', 2018, 'Spring', 'U14', 4, 10003, 4/7/2017)
+INSERT INTO TeamEntry0136(ClubName,SeasonYear,SeasonName,AgeGroup,TeamNumber,PlayerID,dateRegistered)VALUES('Mt Teal Basketball Club', 2018, 'Summer', 'U14', 2, 10004, 6/1/2017)
+INSERT INTO TeamEntry0136(ClubName,SeasonYear,SeasonName,AgeGroup,TeamNumber,PlayerID,dateRegistered)VALUES('Hallownest Basketball Club', 2018, 'Winter', 'U14', 3, 10002, 9/2/2017)
