@@ -54,7 +54,7 @@ dateRegistered DATE
 ,TeamNumber int
 PRIMARY KEY(PlayerID,AgeGroup,TeamNumber,SeasonYear,SeasonName,ClubName)
 )
-INSERT INTO TeamEntry0136(ClubName,SeasonYear,SeasonName,AgeGroup,TeamNumber,PlayerID,dateRegistered)VALUES('Mt Martha Basketball Club', 2018, 'Summer', 'U14', 1, 10002, 12/3/2017)
-INSERT INTO TeamEntry0136(ClubName,SeasonYear,SeasonName,AgeGroup,TeamNumber,PlayerID,dateRegistered)VALUES('Mt Martha Basketball Club', 2018, 'Spring', 'U14', 4, 10003, 4/7/2017)
-INSERT INTO TeamEntry0136(ClubName,SeasonYear,SeasonName,AgeGroup,TeamNumber,PlayerID,dateRegistered)VALUES('Mt Teal Basketball Club', 2018, 'Summer', 'U14', 2, 10004, 6/1/2017)
-INSERT INTO TeamEntry0136(ClubName,SeasonYear,SeasonName,AgeGroup,TeamNumber,PlayerID,dateRegistered)VALUES('Hallownest Basketball Club', 2018, 'Winter', 'U14', 3, 10002, 9/2/2017)
+INSERT INTO PlayerRegistration0136(ClubName,SeasonYear,SeasonName,AgeGroup,TeamNumber,PlayerID,dateRegistered)VALUES('Mt Martha Basketball Club', 2018, 'Summer', 'U14', 1, 10002, '2017-11-5')
+INSERT INTO PlayerRegistration0136(ClubName,SeasonYear,SeasonName,AgeGroup,TeamNumber,PlayerID,dateRegistered)VALUES('Mt Martha Basketball Club', 2018, 'Spring', 'U14', 4, 10003, '2017-12-22')
+INSERT INTO PlayerRegistration0136(ClubName,SeasonYear,SeasonName,AgeGroup,TeamNumber,PlayerID,dateRegistered)VALUES('Mt Teal Basketball Club', 2018, 'Summer', 'U14', 2, 10004, '2017-12-12')
+INSERT INTO PlayerRegistration0136(ClubName,SeasonYear,SeasonName,AgeGroup,TeamNumber,PlayerID,dateRegistered)VALUES('Hallownest Basketball Club', 2018, 'Winter', 'U14', 3, 10002, '2017-11-4')
